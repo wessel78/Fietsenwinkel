@@ -45,7 +45,7 @@
             {
                 return "Error: " . $query . "<br>" . $db->errorInfo();
             }
-            return $result;
+            return null;
         }
     }
 ?>
