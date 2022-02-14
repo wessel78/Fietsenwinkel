@@ -1,3 +1,11 @@
+<footer class="bg-dark text-center text-lg-start align-items-center">
+    <!-- Copyright -->
+    <div class="text-center p-3 text-light">
+        <p>© 2022 FietsWinkel | All Rights Reserved</p>
+    </div>
+    <!-- Copyright -->
+</footer>
+    
     <!--Jquery-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script>
     <!--Popper-->
