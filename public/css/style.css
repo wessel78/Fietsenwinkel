@@ -1,15 +1,19 @@
 .page-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  min-height: 85vh;
+  min-height: 90vh;
+}
+
+.page-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 12px;
+  width: 100%;
+  min-height: 90vh;
 }
 
 nav {
@@ -25,4 +29,42 @@ nav {
   font-size: 24px;
   line-height: 29px;
 }
-/*# sourceMappingURL=style.css.map */
+
+.beheer-card-wrapper {
+  width: 100%;
+  max-width: 275px;
+  min-height: 275px;
+  margin: 12px;
+}
+
+.beheer-card-wrapper p {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.beheer-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 275px;
+  min-height: 275px;
+  box-sizing: border-box;
+  padding: 12px;
+  background-color: #F3F3F3;
+  border-radius: 5px;
+  background-color: #F3F3F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.beheer-card:hover {
+  transition: 0.2s;
+  filter: brightness(80%);
+}
+
+.beheer-card i {
+  font-size: 65px;
+}/*# sourceMappingURL=style.css.map */
