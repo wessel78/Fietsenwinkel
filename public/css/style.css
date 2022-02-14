@@ -9,6 +9,7 @@
 .page-content-wrapper {
   display: flex;
   flex-direction: row;
+  align-content: flex-start;
   flex-wrap: wrap;
   box-sizing: border-box;
   padding: 12px;
@@ -69,4 +70,76 @@ nav {
 
 .beheer-card i {
   font-size: 65px;
+}
+
+.beheer-fietsen-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 275px;
+  min-height: 324px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 12px;
+}
+
+.beheer-fietsen-card-header {
+  width: 100%;
+  min-height: 175px;
+}
+
+.beheer-fietsen-card-header img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.beheer-fietsen-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 30px;
+}
+
+.beheer-fietsen-card-title p {
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.beheer-fietsen-card-footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-wrapper a {
+  width: 50px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  background-color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s;
+}
+
+.footer-wrapper a:hover {
+  filter: brightness(80%);
 }/*# sourceMappingURL=style.css.map */
