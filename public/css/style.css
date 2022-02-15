@@ -1,4 +1,13 @@
 .page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   min-height: 85vh;
 }
@@ -17,3 +26,8 @@ nav {
   line-height: 29px;
 }
 /*# sourceMappingURL=style.css.map */
+
+input + input{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
