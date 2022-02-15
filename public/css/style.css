@@ -217,6 +217,37 @@ nav {
           filter: brightness(80%);
 }
 
+.add-fietsen-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 275px;
+  height: 324px;
+  margin: 12px;
+  border-radius: 5px;
+  border: 1px solid black;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.add-fietsen-card:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.add-fietsen-card i {
+  font-size: 100px;
+}
+
 .fiets-edit-page-title h1 {
   text-align: center;
 }

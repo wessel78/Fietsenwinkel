@@ -67,3 +67,26 @@
 .footer-wrapper a:hover {
     filter: brightness(80%);
 }
+
+.add-fietsen-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 275px;
+    height: 324px;
+    margin: 12px;
+    border-radius: 5px;
+    border: 1px solid black;
+    transition: .2s;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.add-fietsen-card:hover {
+    filter: brightness(80%);
+}
+
+.add-fietsen-card i {
+    font-size: 100px;
+}

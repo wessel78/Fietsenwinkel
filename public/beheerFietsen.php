@@ -36,6 +36,10 @@
                 </div>
             </div>
         </div>
+
+        <div class="add-fietsen-card">
+            <i class="fa-solid fa-circle-plus"></i>
+        </div>
     </div>
 </div>
 
