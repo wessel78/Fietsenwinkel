@@ -248,41 +248,6 @@ nav {
   font-size: 100px;
 }
 
-.fiets-edit-page-title h1 {
-  text-align: center;
-}
-
-.fiets-edit-page-title {
-  margin-bottom: 25px;
-}
-
-.fietsen-edit-content-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.fietsen-edit-content-wrapper img {
-  width: 100%;
-  height: 100%;
-}
-
-.edit-img-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .inlog {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -328,5 +293,173 @@ nav {
 .review-btn {
   margin-bottom: 30px;
   border: 1px solid white;
+}
+
+.fiets-edit-page-title h1 {
+  text-align: center;
+}
+
+.fiets-edit-page-title {
+  margin-bottom: 25px;
+}
+
+.fietsen-edit-content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.fietsen-edit-content-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.edit-img-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.text-content {
+  height: auto;
+  width: 450px;
+  height: auto;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.017em;
+  color: #000000;
+  padding-top: 20px;
+}
+
+.photo-content {
+  width: 450px;
+  height: auto;
+  padding-left: 10%;
+  padding-top: 20px;
+}
+
+.index-flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.info-index {
+  line-height: 6px;
+}
+
+.companyphoto {
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 930px) {
+  .index-flexbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+  }
+  .text-content {
+    width: 100%;
+    max-width: 450px;
+  }
+  .photo-content {
+    width: 100%;
+    max-width: 450px;
+    margin: 25px 0 0 0;
+    padding: 0;
+  }
+  .photo-content img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.fietsen-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  max-width: 275px;
+  min-height: 324px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 12px;
+}
+
+.fietsen-card-header {
+  width: 100%;
+  min-height: 175px;
+}
+
+.fietsen-card-header img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.fietsen-card-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 30px;
+}
+
+.fietsen-card-title p {
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.fietsen-card-footer {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 /*# sourceMappingURL=style.css.map */
