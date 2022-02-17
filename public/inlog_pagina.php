@@ -7,9 +7,9 @@
 
 <div class="page-wrapper">
 <form class="form-signin text-center">
-      <input type="email" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-      <button class="btn btn-lg btn-primary btn-block bg-dark" type="submit">Sign in</button>
+      <input type="email" id="inputEmail" class="form-control inlog" placeholder="Username" required="" autofocus="" >
+      <input type="password" id="inputPassword" class="form-control inlog" placeholder="Password" required="">
+      <button class="btn btn-lg btn-primary btn-block bg-dark inlog-btn" type="submit">Sign in</button>
     </form>
 </div>
    
