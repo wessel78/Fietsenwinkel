@@ -1,0 +1,56 @@
+.text-content {
+height: auto;
+width: 450px;
+height: auto;
+font-size: 18px;
+line-height: 22px;
+letter-spacing: -0.017em;
+color: #000000;
+padding-top: 20px;
+}
+
+.photo-content {
+    width: 450px;
+    height: auto;
+    padding-left: 10%;
+    padding-top: 20px;
+}
+
+.index-flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.info-index {
+    line-height: 6px ;
+}
+
+.companyphoto {
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 930px) {
+    .index-flexbox {
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .text-content {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .photo-content {
+        width: 100%;
+        max-width: 450px;
+        margin: 25px 0 0 0;
+        padding: 0;
+    }
+
+    .photo-content img {
+        width: 100%;
+        height: 100%;
+    }
+}
