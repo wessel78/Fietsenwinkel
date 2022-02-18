@@ -6,13 +6,12 @@
         "scss/includes/_nav.scss",
         "scss/beheerPaginas/_beheerDashboard.scss",
         "scss/beheerPaginas/_beheerFietsen.scss",
+        "scss/login_register/_login.scss",
+        "scss/login_register/_register.scss",
         "scss/review/review.scss",
         "scss/beheerPaginas/_beheerFietsenDetailEdit.scss",
         "scss/indexscss/_index.scss",
         "scss/indexscss/_fietsen.scss"
-        "scss/login_register/_login.scss",
-        "scss/login_register/_register.scss",
-        "scss/review/review.scss",
     ],
     "names": [],
     "file": "style.css"
