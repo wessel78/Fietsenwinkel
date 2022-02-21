@@ -462,4 +462,28 @@ nav {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+
+.detailimage {
+  background-color: black;
+  width: 500px;
+}
+
+.detailimagesrc {
+  width: 100%;
+  height: 100%;
+}
+
+.detailbike {
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+.detailsbikepage {
+  margin-top: 20px;
+}
+
+.bikedetails {
+  margin-top: 20px;
+  width: 63%;
+}
 /*# sourceMappingURL=style.css.map */
