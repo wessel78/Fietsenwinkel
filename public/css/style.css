@@ -462,4 +462,12 @@ nav {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+
+.table-dark {
+  width: 80vw;
+}
+
+.pay {
+  border: 1px solid white;
+}
 /*# sourceMappingURL=style.css.map */
