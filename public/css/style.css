@@ -485,5 +485,12 @@ nav {
 .bikedetails {
   margin-top: 20px;
   width: 63%;
+  
+.table-dark {
+  width: 80vw;
+}
+
+.pay {
+  border: 1px solid white;
 }
 /*# sourceMappingURL=style.css.map */
