@@ -12,6 +12,7 @@
         "scss/beheerPaginas/_beheerFietsenDetailEdit.scss",
         "scss/indexscss/_index.scss",
         "scss/indexscss/_fietsen.scss",
+        "scss/indexscss/_fietsdetail.scss"
         "scss/winkelwagen/_winkelwagen.scss"
     ],
     "names": [],
