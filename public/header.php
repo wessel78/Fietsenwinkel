@@ -27,19 +27,19 @@
         <div class="form-inline my-2 my-lg-0">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="">Producten</a>
+                    <a class="nav-link" href="fietsen.php">Producten</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="review.php">Contact</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Winkelwagen</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Inloggen</a>
+                    <a class="nav-link" href="inlog_pagina.php">Inloggen</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Registeren</a>
+                    <a class="nav-link" href="registreren_pagina.php">Registeren</a>
                 </li>
             </ul>
         </div>
