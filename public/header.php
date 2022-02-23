@@ -1,7 +1,7 @@
 <?php 
     require "../config/config.php";
     require "../config/database.php";
-
+    require "../src/sessions.php";
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Fietsenwinkel.nl</a>
+    <a class="navbar-brand" href="index.php">Fietsenwinkel.nl</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -27,20 +27,32 @@
         <div class="form-inline my-2 my-lg-0">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="">Producten</a>
+                    <a class="nav-link" href="fietsen.php">Producten</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="winkelwagen.php">Winkelwagen</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Winkelwagen</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inloggen</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Registeren</a>
-                </li>
+                <?php if($_SESSION['login'] == "false"): ?>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="inlog_pagina.php">Inloggen</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="registreren_pagina.php">Registeren</a>
+                    </li>
+                <?php endif; ?>
+                <?php if ($_SESSION['login'] == "true" && $_SESSION['permission'] == "user"): ?>
+                    <li class="nav-item active">
+                        <a id="uitloggen-btn" class="nav-link" href="">Uitloggen</a>
+                    </li>
+                <?php endif;?>
+                <?php if ($_SESSION['login'] == "true" && $_SESSION['permission'] == "admin"): ?>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="beheerDashboard.php">Dashboard</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a id="uitloggen-btn" class="nav-link" href="">Uitloggen</a>
+                    </li>
+                <?php endif;?>
             </ul>
         </div>
     </div>

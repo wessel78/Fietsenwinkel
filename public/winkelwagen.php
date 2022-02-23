@@ -1,5 +1,12 @@
 <?php
 session_start();
+
+if($_SESSION['login'] == "false")
+{
+  header("Location: inlog_pagina.php");
+  die();
+}
+
 require "header.php";
 include "../src/classes/Database.php";
 $db = new Database;
