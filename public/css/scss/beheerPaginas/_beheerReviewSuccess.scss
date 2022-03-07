@@ -1,0 +1,12 @@
+.swall-wrapper {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+}

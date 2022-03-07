@@ -2,7 +2,8 @@
 //Public
 define("PUBLIC_FOLDER", "../public/");
 define("CSS_FOLDER", "css/");
-define("IMAGE_FOLDER", "image/");
+define("IMAGE_FOLDER", "img/");
+define("FIETS_IMAGE", "img/fiets_img/");
 define("JS_FOLDER", "js/");
 
 //Source

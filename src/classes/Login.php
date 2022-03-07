@@ -14,9 +14,14 @@
                 $user = $this->checkIfUserExist($this->username);
                 $password_hash = $user[0]['password'];
                 $user_permission = $user[0]['user_permission'];
+                $user_id = $user[0]['user_id'];
+
                 if($this->checkIfUserExist($this->username) == "false") return "incorrect-login";
                 if($this->checkIfPasswordCorrect($this->password, $password_hash) == "false") return "incorrect-login";
+                
                 $_SESSION['login'] = "true";
+                $_SESSION['user_id'] = $user_id;
+
                 if($user_permission == 1) {$_SESSION['permission'] = "user";} elseif($user_permission == 2) {$_SESSION['permission'] = "admin";}
                 return "success";
             }

@@ -25,25 +25,27 @@ $db = new Database;
 
 <div class="page-wrapper">
     <div class="page-content-wrapper">
-        <!-- Review body -->
-        <div class="review-body">
-            <p>Naam: </p>
-            <p>Title: </p>
-            <p>Bericht: </p>
+       <div class="review-content-wrapper">
 
-            <button class="btn btn-secondary">Verwijderen</button>
-        </div>
-        
-        <!-- Review body -->
-        <div class="review-body">
-            <p>Naam: </p>
-            <p>Title: </p>
-            <p>Bericht: </p>
+            <!-- <div class="review-body">
+                <p>Naam: </p>
+                <p>Title: </p>
+                <p>Bericht: </p>
 
-            <button class="btn btn-secondary">Verwijderen</button>
-        </div>
+                <button class="btn btn-secondary">Verwijderen</button>
+            </div>
+            
+            <div class="review-body">
+                <p>Naam: </p>
+                <p>Title: </p>
+                <p>Bericht: </p>
+
+                <button class="btn btn-secondary">Verwijderen</button>
+            </div> -->
+       </div>
     </div>
 </div>
 
+<script src="js/beheer/dashboard/beheerGetReviews.js"></script>
 
 <?php require "footer.php";?>

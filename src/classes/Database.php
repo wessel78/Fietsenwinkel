@@ -47,6 +47,21 @@
             }
             return null;
         }
+
+        function db_updateData($query)
+        {
+            $db = $this->connect_pdo();
+            $query = $db->prepare($query);
+            if($query->execute())
+            {
+                return "success";
+            }
+            else
+            {
+                return "Error: " . $query . "<br>" . $db->errorInfo();
+            }
+            return null;
+        }
     }
 ?>
   

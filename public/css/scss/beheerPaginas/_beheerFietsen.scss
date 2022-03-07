@@ -90,3 +90,9 @@
 .add-fietsen-card i {
     font-size: 100px;
 }
+
+.fiets-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}

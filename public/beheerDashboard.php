@@ -20,9 +20,10 @@ $db = new Database;
 
 <div class="page-wrapper">
     <div class="page-content-wrapper">
+
+        <!-- Beheer fietsen -->
         <div class="beheer-card-wrapper">
-            <!-- Beheer fietsen -->
-            <div class="beheer-card">
+            <div  id="beheer-fiets-btn" class="beheer-card">
                 <i class="fa-solid fa-person-biking"></i>
             </div>
             <p>Beheer fietsen</p>
@@ -30,7 +31,7 @@ $db = new Database;
 
         <!-- Beheer reviews -->
         <div class="beheer-card-wrapper">
-            <div class="beheer-card">
+            <div id="beheer-review-btn" class="beheer-card">
                 <i class="fa-solid fa-comment-dots"></i>
             </div>
             <p>Beheer reviews</p>
@@ -38,5 +39,6 @@ $db = new Database;
     </div>
 </div>
 
+<script src="js/beheer/dashboard/dashboardNavigation.js"></script>
 
 <?php require "footer.php";?>
