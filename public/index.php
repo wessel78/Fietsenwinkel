@@ -8,15 +8,16 @@ $db = new Database;
 <div class="page-wrapper">
     <div class="index-flexbox">
         <div class="text-content">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing.
+        Een goed, betrouwbaar en betrokken adres voor alle tweewielervragen. Dat is Fietsenwinkel.nl. Vanuit onze een compleet nieuw ingerichte winkel in Wehl bedienen wij al meer dan 60 jaar een zeer trouwe klantenkring. Niet voor niets zie je zoveel fietsen in de regio met een rode sticker van Fietsenwinkel.nl op het achterspatbord. Let er maar eens op!
+        Wij vinden het belangrijk om samen de juiste fiets voor u te vinden. Dat betekent dat wij goed luisteren naar uw wensen en u de tijd en ruimte geven om rustig proef te rijden. U kunt bij ons terecht voor alle soorten (elektrische) fietsen, uitsluitend van de beste merken. Of u nu fietst om fit en gezond te blijven, te recreëren of om gewoon comfortabel van A naar B te komen, wij hebben alles in huis om u met een tevreden glimlach op weg te laten gaan.
         </div>
         <div class="photo-content">
-            <img src="../public/img/no-image-found.webp" class="companyphoto">
-            <p class="info-index">Plaats, land</p>
-            <p class="info-index">Adres </p>
-            <p class="info-index">postcode</p>
-            <p class="info-index">telefoon</p>
-            <p class="info-index">email </p>
+            <img src="../public/img/winkel.jpg" class="companyphoto">
+            <p class="info-index">Wehl, Nederland</p>
+            <p class="info-index">Beatrixplein 8</p>
+            <p class="info-index">7031aj</p>
+            <p class="info-index">0681602109</p>
+            <p class="info-index">email@fietsenwinkel.nl</p>
         </div>
     </div>
 </div>
