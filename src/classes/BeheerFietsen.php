@@ -57,6 +57,13 @@
             return "success";
         }
 
+        public function removeFiets($fiets_id) {
+            $db = new Database();
+            $query = $db->db_updateData("UPDATE product SET product_active = 0 WHERE product_id = $fiets_id");
+
+            return "success";
+        }
+
         private function saveImage()
         {
             $allow = array("jpg", "jpeg", "png");

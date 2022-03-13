@@ -57,6 +57,7 @@
                     <input type="email" name="fietsPrice" value="<?php echo $product_information[0]['product_price']?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Price of product">
                 </div>
                 <button id="save-fiets-btn" class="btn btn-secondary">Opslaan</button>
+                <button id="remove-fiets-btn" class="btn btn-secondary">Verwijder fiets</button>
             </form>
        </div>
     </div>
@@ -64,9 +65,11 @@
 
 <script>
     const xhr = new XMLHttpRequest();
-    const place_review_btn = document.querySelector('#save-fiets-btn');
+    const save_fiets_btn = document.querySelector('#save-fiets-btn');
+    const remove_fiets_btn = document.querySelector('#remove-fiets-btn');
+    const fiets_id = <?php echo $_GET['fiets_id'] ?>
 
-    place_review_btn.addEventListener('click', (e) => {
+    save_fiets_btn.addEventListener('click', (e) => {
         const fiets_form = document.querySelector('#edit-fiets-form');
         const fiets_form_data = new FormData(fiets_form);
         fiets_form_data.append('product-id', <?php echo $_GET['fiets_id'] ?>);
@@ -75,7 +78,6 @@
             if (this.readyState === 4 && this.status === 200) {
                 console.log(this.responseText)
                 if(this.responseText.trim() == "success") {
-                    console.log(1)
                     window.location.reload();
                 }
             }
@@ -83,6 +85,21 @@
         xhr.open("POST", "../src/functions/editFiets.php");
         // xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.send(fiets_form_data);
+    })
+
+    remove_fiets_btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                console.log(this.responseText)
+                if(this.responseText.trim() == "success") {
+                    window.location.href = "beheerFietsen.php";
+                }
+            }
+        }
+        xhr.open("POST", "../src/functions/removeFiets.php");
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.send(`fiets_id=${fiets_id}`);
     })
 </script>
 
