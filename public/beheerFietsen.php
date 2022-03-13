@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    if ($_SESSION['login'] == "false") 
+    if ($_SESSION['login'] == "false")
     {
         header("Location: inlog_pagina.php");
         die();
@@ -21,7 +21,7 @@
 <div class="page-wrapper">
     <div class="page-content-wrapper">
             <div class="fiets-content-wrapper">
-                
+
             </div>
         <div class="add-fietsen-card">
             <i class="fa-solid fa-circle-plus"></i>

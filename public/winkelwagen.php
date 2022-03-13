@@ -1,60 +1,56 @@
 <?php
 session_start();
 
-if($_SESSION['login'] == "false")
-{
+if ($_SESSION['login'] == "false") {
   header("Location: inlog_pagina.php");
   die();
 }
 
 require "header.php";
-include "../src/classes/Database.php";
-$db = new Database;
+$db = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 ?>
 
 <div class="page-wrapper">
-<table class="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col">ProductID</th>
-      <th scope="col">Amount</th>
-      <th scope="col">Price</th>
-      <th scope="col">Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>fiets1</td>
-      <td>2</td>
-      <td>1000</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>fiets2</td>
-      <td>3</td>
-      <td>3000</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>fiets3</td>
-      <td>1</td>
-      <td>2000</td>
-    </tr>
-    <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td></td>
-      <td>6000</td>
-    </tr>
-    <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td></td>
-      <td><button type="button" class="btn btn-dark pay">Betalen</button>
-</td>
-    </tr>
-  </tbody>
-</table>
+
+  <?php
+
+  if (!isset($_SESSION['cart'])) {
+    echo "<h1>Voeg een product toe aan je winkelwagen</h1>";
+  } else {
+
+    $itemString = implode("', '", $_SESSION['cart']);
+
+    $stmt = "SELECT * FROM product where product_id in ('$itemString')";
+
+    $results = $db->query($stmt); ?>
+
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">ProductID</th>
+          <th scope="col">Product</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php while ($product = $results->fetch_assoc()) { ?>
+
+          <tr>
+            <td>#<?= $product['product_id'] ?></td>
+            <td><?= $product['product_title'] ?></td>
+            <td>€<?= $product['product_price'] ?></td>
+          </tr>
+
+        <?php }
+
+        ?>
+        <tr>
+          <td><a href="bevestiging.php" style="color: white; text-decoration: none;">Betalen</a></td>
+          <td><a href="emptyCart.php" style="color: white; text-decoration: none;">Leegmaken</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+  <?php } ?>
 </div>
-<?php require "footer.php";?>
+<?php require "footer.php"; ?>
