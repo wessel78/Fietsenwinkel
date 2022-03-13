@@ -22,7 +22,10 @@ $db = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
     $stmt = "SELECT * FROM product where product_id in ('$itemString')";
 
-    $results = $db->query($stmt); ?>
+    $results = $db->query($stmt); 
+    
+    $shoppingTotal = 0;
+    ?>
 
     <table class="table table-dark">
       <thead>
@@ -33,7 +36,10 @@ $db = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         </tr>
       </thead>
       <tbody>
-        <?php while ($product = $results->fetch_assoc()) { ?>
+        <?php 
+          while ($product = $results->fetch_assoc()) { 
+          $shoppingTotal += $product['product_price'];
+        ?>
 
           <tr>
             <td>#<?= $product['product_id'] ?></td>
@@ -47,6 +53,7 @@ $db = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         <tr>
           <td><a href="bevestiging.php" style="color: white; text-decoration: none;">Betalen</a></td>
           <td><a href="emptyCart.php" style="color: white; text-decoration: none;">Leegmaken</a></td>
+          <td>€<?= $shoppingTotal ?></td>
         </tr>
       </tbody>
     </table>
