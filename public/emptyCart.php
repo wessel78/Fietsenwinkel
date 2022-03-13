@@ -4,4 +4,4 @@ session_start();
 
 unset($_SESSION['cart']);
 
-header("location: index.php");
+header("location: winkelwagen.php");
