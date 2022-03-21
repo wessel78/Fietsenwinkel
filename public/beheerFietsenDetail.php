@@ -32,19 +32,19 @@
                     </div>
                 </div>
                 <div class="form-group mb-4">
-                    <label for="exampleInputEmail1">Title of the product</label>
+                    <label for="exampleInputEmail1">Titel van Product</label>
                     <input type="email" class="form-control" name="fietsTitle" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Title of product">
                 </div>
                 <div class="form-group mb-4">
-                    <label for="exampleInputEmail1">Description of the product</label>
+                    <label for="exampleInputEmail1">Omschrijving van Product</label>
                     <textarea class="form-control" name="fietsDescription" rows="7"></textarea>
                 </div>
                 <div class="form-group mb-4">
-                    <label for="exampleInputEmail1">Color of the product</label>
+                    <label for="exampleInputEmail1">Kleur van Product</label>
                     <input type="email" class="form-control" name="fietsColor" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Color of product">
                 </div>
                 <div class="form-group mb-4">
-                    <label for="exampleInputEmail1">Price of the product</label>
+                    <label for="exampleInputEmail1">Prijs van Product</label>
                     <input type="email" class="form-control" name="fietsPrice" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Price of product">
                 </div>
                 <button id="save-fiets-btn" class="btn btn-secondary">Opslaan</button>

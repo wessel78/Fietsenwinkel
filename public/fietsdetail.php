@@ -28,7 +28,7 @@ if ($products->num_rows > 0) {
             <br>
             <h1>€<?= $product['product_price'] ?></h1>
             <br>
-            <button type="button" id="addToCart" data-id="<?= $product['product_id'] ?>" class="btn btn-secondary btn-lg">Add to card</button>
+            <button type="button" id="addToCart" data-id="<?= $product['product_id'] ?>" class="btn btn-secondary btn-lg">Zet in winkelwagel</button>
         </div>
         <div class="bikedetails">
             <?= $product['product_description'] ?>
