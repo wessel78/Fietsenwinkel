@@ -3,8 +3,7 @@ const reviews_wrapper = document.querySelector('.review-content-wrapper');
 
 getReviews();
 
-function getReviews()
-{
+function getReviews() {
     xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             reviews_wrapper.innerHTML = "";
@@ -15,6 +14,7 @@ function getReviews()
                     <p>Naam: <strong>${review.user_name}</strong></p>
                     <p>Title: <strong>${review.review_title}</strong></p>
                     <p>Bericht: <strong>${review.review_body}</strong></p>
+                    <p>Datum: <strong>${review.review_date}</strong></p>
 
                     <button onclick='removeBlogPost(${review.review_id})' class="btn btn-secondary">Verwijderen</button>
                 </div>
@@ -28,15 +28,13 @@ function getReviews()
 }
 
 
-function removeBlogPost(review_id)
-{
+function removeBlogPost(review_id) {
     const xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             console.log(this.responseText)
             getReviews();
-
         }
     }
     xhr.open("POST", "../src/functions/removeReview.php");
