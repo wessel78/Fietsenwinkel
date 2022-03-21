@@ -25,7 +25,7 @@ $products = $db->query("SELECT * FROM product");
                     <div class="fietsen-card-footer">
                         <div class="footer-wrapper">
                             <p>€<?= $product['product_price'] ?></p>
-                            <a href="fietsdetail.php?id=<?= $product['product_id'] ?>">View</a>
+                            <a href="fietsdetail.php?id=<?= $product['product_id'] ?>">Bekijk</a>
                         </div>
                     </div>
                 </div>

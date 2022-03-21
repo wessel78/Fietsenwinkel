@@ -1,3 +1,3 @@
 setTimeout(() => {
-    window.location = "index.php";
-},5000)
+    window.location = "review.php";
+},2500)

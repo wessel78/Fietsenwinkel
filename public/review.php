@@ -12,7 +12,9 @@
     $db = new Database;
 ?>
 
-<div class="page-wrapper">
+<h1 class="review-title">Plaats uw review:</h1>
+
+<div class="page-wrapper no-align">
     <div class="review-container">
       <form id="review-form" class="text-center">
         <div class="form-group">
@@ -27,6 +29,27 @@
       </form>
     </div>
 </div>
+
+<h1 class="review-title">Reviews</h1>
+
+<hr>
+
+<div class="review-wrapper">
+
+
+
+    <?php
+    $query = $db->db_getData("SELECT * FROM review WHERE review_active = 1");
+    
+    foreach($query as $review) {
+        echo "<div class='review-body'><p>Naam: <strong>$review[review_id]</strong></p><p>Title: $review[review_title]<strong></strong></p><p>Bericht: $review[review_body] <strong></strong></p></div>";
+    }
+
+    ?>
+
+</div>
+
+
 
 <script src="js/beheer/dashboard/placeReview.js"></script>
 
