@@ -32,7 +32,7 @@ $db = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         <tr>
           <th scope="col">ProductID</th>
           <th scope="col">Product</th>
-          <th scope="col">Price</th>
+          <th scope="col">Prijs</th>
         </tr>
       </thead>
       <tbody>

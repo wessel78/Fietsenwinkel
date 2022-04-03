@@ -21,9 +21,7 @@
     $product_id = $_GET['fiets_id'];
 
     $beheerFietsen = new BeheerFietsen();
-    $product_information = $beheerFietsen->getFietsenEdit($product_id);
-    
-    
+    $product_information = $beheerFietsen->getFietsenEdit($product_id);    
 ?>
 
 <div class="page-wrapper">
@@ -48,12 +46,82 @@
                     <label for="exampleInputEmail1">Omschrijven van Product</label>
                     <textarea class="form-control" name="fietsDescription" rows="7"><?php echo $product_information[0]['product_description'] ?></textarea>
                 </div>
-                <div class="form-group mb-4">
-                    <label for="exampleInputEmail1">Kleur van Product</label>
-                    <input type="email" name="fietsColor" value="<?php echo $product_information[0]['product_color']?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Color of product">
+               <div class="form-group mb-4">
+                    <label for="exampleInputEmail1">Kleur van de fiets</label>
+                    <select class="form-select" name="bikeColor" aria-label="Default select example">
+                        <?php 
+                            $product_color = $db->db_getData("SELECT * FROM product_color");
+                            foreach($product_color as $color) {
+                                if($product_information[0]['product_color'] == $color['color_id'])
+                                {
+                                    echo "<option selected value='$color[color_id]'>$color[color_name]</option>";
+                                }
+                                else
+                                {
+                                    echo "<option value='$color[color_id]'>$color[color_name]</option>";
+                                }
+                            }
+                        ?>
+                    </select>
                 </div>
                 <div class="form-group mb-4">
-                    <label for="exampleInputEmail1">Prijs van Product</label>
+                    <label for="exampleInputEmail1">Frame grote</label>
+                    <select class="form-select" name="bikeFrame" aria-label="Default select example">
+                        <?php
+                            $product_frame = $db->db_getData("SELECT * FROM product_frame");
+                            foreach ($product_frame as $frame) {
+                                if($product_information[0]['product_frame'] == $frame['frame_id']) 
+                                {
+                                    echo "<option selected value='$frame[frame_id]'>$frame[frame_size]</option>";
+                                }
+                                else
+                                {
+                                    echo "<option value='$frame[frame_id]'>$frame[frame_size]</option>";
+                                }
+                            }
+                        ?>
+
+                    </select>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="exampleInputEmail1">Wiel grote</label>
+                    <select class="form-select" name="bikeWheel" aria-label="Default select example">
+                        <?php 
+                            $product_wheel = $db->db_getData("SELECT * FROM product_wheel");
+                            foreach ($product_wheel as $wheel) {
+                                if($product_information[0]['product_wheel'] == $wheel['wheel_id'])
+                                {
+                                    echo "<option selected value='$wheel[wheel_id]'>$wheel[wheel_size]</option>";
+                                }
+                                else
+                                {
+                                    echo "<option value='$wheel[wheel_id]'>$wheel[wheel_size]</option>";
+                                }
+                            }
+
+                        ?>
+                    </select>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="exampleInputEmail1">Is de fiets elektrisch</label>
+                    <select class="form-select" name="bikeElectric" aria-label="Default select example">
+                        <?php
+                            if($product_information[0]['bike_electric'] == 1)
+                            {
+                                echo "<option selected value='1'>Ja</option>";
+                                echo "<option value='0'>Nee</option>";
+                            }
+                            else
+                            {
+                                echo "<option value='1'>Ja</option>";
+                                echo "<option selected value='0'>Nee</option>";
+                            }
+                        ?>
+                        
+                    </select>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="exampleInputEmail1">Price of the product</label>
                     <input type="email" name="fietsPrice" value="<?php echo $product_information[0]['product_price']?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Price of product">
                 </div>
                 <button id="save-fiets-btn" class="btn btn-secondary">Opslaan</button>

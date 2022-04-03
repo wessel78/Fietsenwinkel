@@ -6,8 +6,11 @@
             $this->fietsImg = isset($_FILES['fietsImage']) ? $_FILES['fietsImage'] : null;
             $this->fietsTitle = isset($_POST['fietsTitle']) ? $_POST['fietsTitle'] : null;
             $this->fietsDescription = isset($_POST['fietsDescription']) ? $_POST['fietsDescription'] : null;
-            $this->fietsColor = isset($_POST['fietsColor']) ? $_POST['fietsColor'] : null;
+            $this->fietsColor = isset($_POST['bikeColor']) ? $_POST['bikeColor'] : null;
+            $this->fietsFrame = isset($_POST['bikeFrame']) ? $_POST['bikeFrame'] : null;
+            $this->fietsWheel = isset($_POST['bikeWheel']) ? $_POST['bikeWheel'] : null;
             $this->fietsPrice = isset($_POST['fietsPrice']) ? $_POST['fietsPrice'] : null;
+            $this->fietsElectric = isset($_POST['bikeElectric']) ? $_POST['bikeElectric'] : null;
         }
 
         public function addFiets()
@@ -17,7 +20,7 @@
             $uploadFile = $this->saveImage();
             if($uploadFile === "file-not-allowed") return "file-not-allowed";
             
-            $query = $db->db_insertData("INSERT INTO product (product_title, product_type, product_description, product_image, product_price, product_color) VALUES ('$this->fietsTitle', 'Fiets', '$this->fietsDescription', '$uploadFile', '$this->fietsPrice', '$this->fietsColor')");
+            $query = $db->db_insertData("INSERT INTO product (product_title, product_type, product_description, product_image, product_price, product_color, product_frame, product_wheel, product_electric) VALUES ('$this->fietsTitle', 'Fiets', '$this->fietsDescription', '$uploadFile', '$this->fietsPrice', '$this->fietsColor', '$this->productFrame', '$this->productWheel', '$this->productElectric')");
             return "success";
         }
 
@@ -28,6 +31,21 @@
 
             if(count($query) < 0) return "no-results";
             return $query;
+        }
+
+        public function getFietsenFilter($fiets_kleur, $fiets_frame, $fiets_wiel, $fiets_elektrisch)
+        {
+            $sqlQuery = $this->fietsFilterQueryBuilder($fiets_kleur, $fiets_frame, $fiets_wiel, $fiets_elektrisch);
+            $db = new Database();
+            $query = $db->db_getData($sqlQuery);
+
+            if(count($query) < 0) return "no-results";
+            return $query;
+        }
+
+        private function fietsFilterQueryBuilder($fiets_kleur, $fiets_frame, $fiets_wiel, $fiets_elektrisch)
+        {
+            return $query = "SELECT * FROM product WHERE product_active = 1" . ($fiets_kleur != "all" ? " AND product_color = '$fiets_kleur' " : "") . ($fiets_frame != "all" ? " AND product_frame = '$fiets_frame' " : "") . ($fiets_wiel != "all" ? " AND product_wheel = '$fiets_wiel' " : "") . ($fiets_elektrisch != "all" ? " AND product_electric = '$fiets_elektrisch' " : "");
         }
 
         public function getFietsenEdit($product_id)
@@ -41,16 +59,16 @@
         public function editFiets($product_id)
         {
             $db = new Database();
-            if(!$this->fietsTitle || !$this->fietsDescription || !$this->fietsColor || !$this->fietsPrice) return "input-not-filled";
+            if(!$this->fietsTitle || !$this->fietsDescription || !$this->fietsPrice) return "input-not-filled";
             if(!$this->fietsImg['name'])
             {
-                $query = $db->db_insertData("UPDATE product SET product_title = '$this->fietsTitle', product_description = '$this->fietsDescription', product_price = '$this->fietsPrice', product_color = '$this->fietsColor' WHERE product_id = '$product_id'");
+                $query = $db->db_insertData("UPDATE product SET product_title = '$this->fietsTitle', product_description = '$this->fietsDescription', product_price = '$this->fietsPrice', product_color = '$this->fietsColor', product_frame = '$this->fietsFrame', product_wheel = '$this->fietsWheel', product_electric = '$this->fietsElectric' WHERE product_id = '$product_id'");
             }
             else
             {
                 $uploadFile = $this->saveImage();
                 if($uploadFile === "file-not-allowed") return "file-not-allowed";
-                $query = $db->db_insertData("UPDATE product SET product_title = '$this->fietsTitle', product_description = '$this->fietsDescription', product_image = '$uploadFile', product_price = '$this->fietsPrice', product_color = '$this->fietsColor' WHERE product_id = '$product_id'");
+                $query = $db->db_insertData("UPDATE product SET product_title = '$this->fietsTitle', product_description = '$this->fietsDescription', product_image = '$uploadFile', product_price = product_price = '$this->fietsPrice', product_color = '$this->fietsColor', product_frame = '$this->productFrame', product_wheel = '$this->fietsWheel', product_electric = '$this->fietsElectric' WHERE product_id = '$product_id'");
             }
             
             

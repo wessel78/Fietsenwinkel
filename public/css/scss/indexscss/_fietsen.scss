@@ -46,5 +46,31 @@
     justify-content: flex-end;
 }
 
+.fietsen-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
+.filter-wrapper {
+    margin-bottom: 10px;
 
+    .filter-title {
+        text-align: center;
+    }
+
+    .filter-option {
+        select {
+            width: 100%;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+}
