@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
 }
 
 $db = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-$products = $db->query("SELECT * FROM product WHERE product_id = " . $product_id);
+$products = $db->query("SELECT * FROM product INNER JOIN product_color ON (product.product_color = product_color.color_id) INNER JOIN product_frame ON (product.product_frame = product_frame.frame_id) INNER JOIN product_wheel ON (product.product_wheel = product_wheel.wheel_id) WHERE product.product_id = $product_id");
 
 if ($products->num_rows > 0) {
     $product = $products->fetch_assoc();
@@ -24,14 +24,22 @@ if ($products->num_rows > 0) {
         <div class="detailbike">
             <h1><?= $product['product_title'] ?></h1>
             <br>
-            <h1><?= $product['product_color'] ?></h1>
+            <h1>Kleur: <?= $product['color_name'] ?></h1>
             <br>
             <h1>€<?= $product['product_price'] ?></h1>
             <br>
-            <button type="button" id="addToCart" data-id="<?= $product['product_id'] ?>" class="btn btn-secondary btn-lg">Add to card</button>
+            <button type="button" id="addToCart" data-id="<?= $product['product_id'] ?>" class="btn btn-secondary btn-lg">Zet in winkelwagel</button>
         </div>
         <div class="bikedetails">
+            <strong>Omschrijving:</strong>
+            <br>
             <?= $product['product_description'] ?>
+            <br>
+            <br>    
+            <strong>Product informatie:</strong>
+            <br>
+            <p>Fiets frame maat: <?= $product['frame_size'] ?></p>
+            <p>Fiets wiel grote: <?= $product['wheel_size'] ?></p>
         </div>
     </div>
 </div>

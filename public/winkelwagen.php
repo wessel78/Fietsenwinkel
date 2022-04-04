@@ -7,13 +7,13 @@ if ($_SESSION['login'] == "false") {
 }
 
 require "header.php";
+
 $db = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 ?>
 
 <div class="page-wrapper">
 
   <?php
-
   if (!isset($_SESSION['cart'])) {
     echo "<h1>Voeg een product toe aan je winkelwagen</h1>";
   } else {
@@ -32,7 +32,7 @@ $db = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         <tr>
           <th scope="col">ProductID</th>
           <th scope="col">Product</th>
-          <th scope="col">Price</th>
+          <th scope="col">Prijs</th>
         </tr>
       </thead>
       <tbody>

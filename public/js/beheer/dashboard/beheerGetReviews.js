@@ -12,7 +12,7 @@ function getReviews() {
                 reviews_wrapper.innerHTML += `
                 <div class="review-body">
                     <p>Naam: <strong>${review.user_name}</strong></p>
-                    <p>Title: <strong>${review.review_title}</strong></p>
+                    <p>Titel: <strong>${review.review_title}</strong></p>
                     <p>Bericht: <strong>${review.review_body}</strong></p>
                     <p>Datum: <strong>${review.review_date}</strong></p>
 

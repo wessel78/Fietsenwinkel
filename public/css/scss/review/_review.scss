@@ -4,6 +4,20 @@
     border-radius: 5px;
 }
 
+@media only screen and (max-width: 600px) {
+    .review-container{
+        width: 400px;
+    }
+
+    .title{
+        width: 300px !important;
+    }
+
+    .description{
+        width: 300px !important;
+    }
+  }
+
 .title{
     width: 500px;
     margin: 10px auto;
@@ -19,4 +33,25 @@
 .review-btn{
     margin-bottom: 30px;
     border: 1px solid white;
+}
+
+.review-wrapper{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.review-title {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.no-align {
+    align-items: baseline !important;
+    min-height: auto !important;
 }

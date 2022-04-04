@@ -8,6 +8,7 @@ register_btn.addEventListener('click', (e) => {
     xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             let response = this.responseText.trim();
+            console.log(response)
             if (response == "success")
             {
                 window.location = "inlog_pagina.php";
